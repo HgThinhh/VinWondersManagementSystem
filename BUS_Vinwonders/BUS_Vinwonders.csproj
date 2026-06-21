@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43A30C0A-3F84-4DF3-B982-17A0801D93D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BUS_Vinwonders</RootNamespace>
+    <AssemblyName>BUS_Vinwonders</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.8, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.8\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS_BaoTriTroChoi.cs" />
+    <Compile Include="BUS_CaLamViec.cs" />
+    <Compile Include="BUS_ChiTietHDCH.cs" />
+    <Compile Include="BUS_CuaHang.cs" />
+    <Compile Include="BUS_DangKyThanhVien.cs" />
+    <Compile Include="BUS_Dashboard.cs" />
+    <Compile Include="BUS_HangThanhVien.cs" />
+    <Compile Include="BUS_HoaDonCuaHang.cs" />
+    <Compile Include="BUS_HoaDonVe.cs" />
+    <Compile Include="BUS_KhachHang.cs" />
+    <Compile Include="BUS_KhenThuongKyLuat.cs" />
+    <Compile Include="BUS_KhuVuc.cs" />
+    <Compile Include="BUS_LichLamViec.cs" />
+    <Compile Include="BUS_LoaiVe.cs" />
+    <Compile Include="BUS_NhanVien.cs" />
+    <Compile Include="BUS_SanPham.cs" />
+    <Compile Include="BUS_SuKien.cs" />
+    <Compile Include="BUS_TroChoi.cs" />
+    <Compile Include="BUS_TaiKhoan.cs" />
+    <Compile Include="BUS_Ve.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_Vinwonders\DAL_Vinwonders.csproj">
+      <Project>{54985e15-97c5-4dab-8dad-8199a54a5730}</Project>
+      <Name>DAL_Vinwonders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ET_Vinwonders\ET_Vinwonders.csproj">
+      <Project>{b6944d83-c382-4b24-baea-0104453369c4}</Project>
+      <Name>ET_Vinwonders</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
